@@ -1,108 +1,131 @@
-/* Базовые стили */
+/* Reset и базовые стили */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to right, #e0f7fa, #f1f8e9);
-    margin: 0;
-    padding: 0;
-    color: #2c3e50;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Контейнер */
+/* Контейнер визитки */
 .container {
-    width: 90%;
-    max-width: 850px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  max-width: 480px;
+  width: 100%;
+  padding: 40px 35px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* Хедер */
-header {
-    text-align: center;
-    margin-bottom: 40px;
+.container:hover {
+  transform: translateY(-10px);
 }
 
+/* Заголовок */
 header h1 {
-    font-size: 42px;
-    margin: 0;
-    color: #00796b;
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  color: #fff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 header p {
-    font-size: 20px;
-    color: #555;
-    margin-top: 10px;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 28px;
+  font-weight: 500;
 }
 
 /* Секции */
 section {
-    margin-bottom: 35px;
+  margin-bottom: 30px;
+  text-align: left;
 }
 
 section h2 {
-    font-size: 24px;
-    color: #00796b;
-    border-left: 6px solid #00796b;
-    padding-left: 12px;
-    margin-bottom: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  border-bottom: 2px solid #a78bfa;
+  padding-bottom: 8px;
+  color: #ddd6fe;
+}
+
+/* Обо мне */
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e7ff;
 }
 
 /* История */
 .history ul {
-    list-style: none;
-    padding-left: 0;
+  list-style: none;
 }
 
 .history li {
-    background: #e0f2f1;
-    margin-bottom: 12px;
-    padding: 12px 18px;
-    border-left: 5px solid #00796b;
-    border-radius: 6px;
-    transition: background 0.3s ease;
+  background: rgba(255, 255, 255, 0.12);
+  margin-bottom: 14px;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.history li strong {
+  color: #c4b5fd;
+  font-weight: 700;
 }
 
 .history li:hover {
-    background: #b2dfdb;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Контакты */
 .contacts p {
-    margin: 8px 0;
-    font-size: 16px;
+  font-size: 1rem;
+  color: #e0e7ff;
+  margin-bottom: 8px;
 }
 
 .contacts a {
-    color: #00796b;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+  color: #a78bfa;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .contacts a:hover {
-    color: #004d40;
-    text-decoration: underline;
+  color: #7c3aed;
+  text-decoration: underline;
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 32px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
-    section h2 {
-        font-size: 20px;
-    }
-
-    .history li {
-        font-size: 14px;
-    }
+/* Адаптив */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 25px;
+  }
+  header h1 {
+    font-size: 2.2rem;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
 }
 
